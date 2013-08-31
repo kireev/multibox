@@ -198,3 +198,5 @@ void CloudTableView::AnimatedLoading()
 //        //if (mouseEvent->button()==1)
 //        // if button is pressed and down
 //        //if (mouseEvent->buttons() & Qt::LeftButton)
+
+//fucking_shit

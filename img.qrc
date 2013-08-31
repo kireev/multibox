@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>img/add.JPG</file>
+        <file>img/apply.png</file>
+        <file>img/backup.png</file>
+        <file>img/browse.png</file>
+        <file>img/loading.gif</file>
+    </qresource>
+</RCC>

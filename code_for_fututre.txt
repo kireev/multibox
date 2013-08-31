@@ -1,0 +1,200 @@
+CHECK CONNECT FOR INTERNET EVERYWHERE
+sort doesn't enable by qdatetime. It is neseccary to change struct qlist<qstring> qdatetime,int etc.
+sort by size
+utf convert chinese
+end-pageup etc
+add string quantity of files and size
+return size of folder pressing space
+check more than gigabyte file in dropbox (how it's size is converte)
+
+
+
+void CloudTableView::AnimatedLoading()
+{
+
+        CTModel->removeRows(0,CTModel->rowCount(),QModelIndex());
+        CTModel->insertRows(0,1,QModelIndex());
+        QLabel *label = new QLabel();
+        label->setAlignment(Qt::AlignCenter);
+        QModelIndex idx=this->model()->index(0,0);
+        QMovie *movie = new QMovie();
+        movie->setFileName(":/img/loading.gif");
+        movie->start();
+        label->setMovie(movie);
+        this->setIndexWidget(idx,label);
+
+                this->setRowHeight(0,this->height());
+                this->setColumnWidth(0,this->width());
+                this->setDisabled(true);
+                this->horizontalHeader()->hide();
+
+        return;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    //// now we want to understand what path we need to display. This is temp variable. Clear
+    //fullPath="";
+
+
+
+    //// if level-up
+    //if (pathStr.path.contains("../"))
+    //{
+    //    cs->currentViewIndex=currentPath.last().position;
+    //    currentPath.removeLast();
+    //}
+    ////if it's a directory
+    //else
+    //{
+    //    currentPath << pathStr;
+    //    cs->currentViewIndex=0;
+    //}
+
+    ////create fullpath string which contains fullpath to directory
+    //foreach (pathStructure str, currentPath) {
+    //    //qDebug() << str.path << str.position;
+    //    fullPath = fullPath+str.path;
+    //}
+
+    //// set isRoot flag
+    //if (fullPath=="/") {cs->isRoot=true;}
+    //else {cs->isRoot=false;}
+
+
+
+
+
+
+
+
+
+    //// save current path and position. pathStr is Temp_variable
+    //pathStr.position=this->currentIndex().row();
+    //pathStr.path=CTModel->data(CTModel->index(q.row(),0),Qt::DisplayRole).toString() + "/";
+
+
+
+
+//    qDebug() << cs->fullPath;
+//    lst.clear();
+//    cs->m_selectedRows.clear();
+//    //indices from singletable
+//   // m_selectedIndices = lst;
+
+//    std::vector<int> vec;
+
+//    foreach (QModelIndex idx, lst) {
+//        vec.push_back(idx.row());
+//    }
+
+//    std::sort(vec.begin(),vec.end());
+
+//    // copy unique elements in place
+//    std::vector<int>::iterator where;
+//    where = std::unique(vec.begin(),vec.end());
+
+//    // remove trailing values
+//      vec.erase(where, vec.end());
+
+////    foreach (int i, vec) {
+////       qDebug() << i;
+////    }
+
+//    QVector<int> vec1 = QVector<int>::fromStdVector(vec);
+//    QList<int> vec2 = QList<int>::fromVector(vec1);
+//    cs->updateSelectionInfo(vec2);
+   //   cs->updateSelectionInfo(QList<int>::fromVector( QVector<int>::fromStdVector(vec)));
+
+
+//void CloudTableView::updateSectionWidth(int logicalIndex, int, int newSize)
+//{
+//    //   qDebug() << logicalIndex;
+
+//}
+
+//void CloudTableView::updateSectionHeight(int logicalIndex, int, int newSize)
+//{
+//    //      frozenTableView->setRowHeight(logicalIndex, newSize);
+//}
+
+
+
+//void CloudTableView::resizeEvent(QResizeEvent * event)
+//{
+////    QTableView::resizeEvent(event);
+////    //   qDebug() << "We are resizing";
+////}
+
+//void CloudTableView::scrollTo (const QModelIndex & index, ScrollHint hint)
+//{
+////    if(index.column()>0)
+////        QTableView::scrollTo(index, hint);
+//}
+
+
+
+//    // on mouse of keyboard press
+//    connect(tables.at(0)->Ctv,SIGNAL(pressed(const QModelIndex&)) ,this,SLOT(focusIsMade(const QModelIndex&)));
+//    connect(tables.at(1)->Ctv,SIGNAL(pressed(const QModelIndex&)) ,this,SLOT(focusIsMade(const QModelIndex&)));
+
+//    // on mouse wheel focus is made too
+//    connect(tables.at(0)->Ctv,SIGNAL(entered(const QModelIndex&)) ,this,SLOT(focusIsMade(const QModelIndex&)));
+//    connect(tables.at(1)->Ctv,SIGNAL(entered(const QModelIndex&)) ,this,SLOT(focusIsMade(const QModelIndex&)));
+
+
+//    // disable or enable tables while update
+//    connect(tables.at(0)->Ctv,SIGNAL(readyToUpdateSingal(bool)),this,SLOT(changeTablesViewState(bool)));
+//    connect(tables.at(1)->Ctv,SIGNAL(readyToUpdateSingal(bool)),this,SLOT(changeTablesViewState(bool)));
+
+
+
+
+
+    //    this->horizontalHeader()->setStretchLastSection(false);
+    //    this->setColumnWidth(0, 200);
+    //    QHeaderView *headerView = this->horizontalHeader();
+    //    headerView->setStretchLastSection(true);
+
+    //    currentPathToSource="/";
+    //    PreviousPathIndex=this->currentIndex().row();
+
+
+    //    connect(horizontalHeader(),SIGNAL(sectionResized(int,int,int)), this,
+    //            SLOT(updateSectionWidth(int,int,int)));
+
+
+//        switch (mouseEvent->buttons())
+//        {
+//        case Qt::LeftButton:
+//        {
+//          //  qDebug() << qPrintable(obj->objectName());
+//            //qDebug() << QApplication::mouseButtons();
+////            //emit rightButtonCatched(qPrintable(obj->objectName()));
+////            return true;
+////            break;
+//        }
+//        }
+//        return QObject::eventFilter(obj, event);
+
+//qDebug() << mouseEvent->button();
+
+
+//  mouseEvent->ignore();
+//          qDebug("%s %s Mouse button %d click at (%d,%d). Object is %s", \
+//          __DATE__ , __TIME__ ,
+//          mouseEvent->button(), mouseEvent->x(), mouseEvent->y(), \
+//          qPrintable(obj->objectName()) );
+
+//        //if (mouseEvent->button()==1)
+//        // if button is pressed and down
+//        //if (mouseEvent->buttons() & Qt::LeftButton)

@@ -1,3 +1,4 @@
+//fucking is first
 #include "startwindow.h"
 #include <QMenuBar>
 
